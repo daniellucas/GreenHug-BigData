@@ -17,7 +17,6 @@ mongo_client.connect(connectionString);
 //   
 //});
 
-
 function init(db) {
     twitter = new ntwitter(config.twitter);
     var collection = db.collection(config.mongo_collection);

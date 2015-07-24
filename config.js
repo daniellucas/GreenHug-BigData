@@ -7,7 +7,7 @@ var config = {
     },
     "hashtags": '#GreenHug, #CPRecife4',
     "mongo_collection": 'tweets-cprecife4',
-    "mongo_db_name": 'greenHug-bigdata'
+    "mongo_db_name": 'MongoLab-n1'
 }
 
 module.exports = config;
