@@ -3,13 +3,20 @@ var config = require('./config.js');
 var ntwitter = require('ntwitter');
 var mongo_client = require('mongodb').MongoClient;
 
+var mongoose = require('mongoose');  
 
-mongo_client.connect('mongodb://127.0.0.1/'+config.mongo_db_name, function(err, db){
-    if(err) throw err;
-    
-    init(db);
-   
-});
+
+var connectionString = process.env.CUSTOMCONNSTR_MONGOLAB_URI;
+
+
+mongo_client.connect(connectionString);
+//mongo_client.connect('mongodb://127.0.0.1/'+config.mongo_db_name, function(err, db){
+//    if(err) throw err;
+//    
+//    init(db);
+//   
+//});
+
 
 function init(db) {
     twitter = new ntwitter(config.twitter);
